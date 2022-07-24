@@ -1,6 +1,6 @@
 import React from 'react';
 import { ToggleButton, ToggleButtonGroup } from '@mui/material';
-import { makeStyles } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
     root: {
@@ -17,11 +17,13 @@ const useStyles = makeStyles({
         },
         '&.MuiToggleButtonGroup-groupedHorizontal:not(:first-child)': {
             borderRadius: '10px',
+            borderTopTightRadius: '10px',
+            borderBottomRightRadius: '10px',
             border: '1px solid rgba(0, 0, 0, 0.12)',
         },
         '&.Mui-selected': {
             borderRadius: '10px',
-            background: '#000',
+            background: '#00000',
             color: '#fff',
         },
         '&.MuiToggleButton-root': {
@@ -40,8 +42,9 @@ const FilterListToggle = ({ options, value, selectToggle }) => {
             value={value}
             onChange={selectToggle}
             className={classes.root}
+            exclusive
         >
-            {options.map(({ label, id, value }) => <ToggleButton className={classes.toggle} key={id} value={value}>{lable}</ToggleButton>)}
+            {options.map(({ label, id, value }) => <ToggleButton className={classes.toggle} key={id} value={value}> {label}</ToggleButton>)}
         </ToggleButtonGroup>
     )
 }

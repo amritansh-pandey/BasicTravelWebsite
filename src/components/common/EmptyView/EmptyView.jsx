@@ -1,9 +1,12 @@
-import React from 'react'
+import './EmptyView.css';
 
 const EmptyView = () => {
     return (
-      <div>
-        <h1>Empty View</h1>
+      <div className='emptyView-wrap'>
+        {/* <img src='/images/gif/empty.gif' alt='' /> */}
+
+        <h1>No Results</h1>
+       
       </div>
     )
   }

@@ -2,25 +2,22 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-
-}
-
-.home-panelList-wrap, .home-panel-wrap, .home-list-wrap {
+  }
+  .home_panelList-wrap,
+  .home_panel-wrap,
+  .home_list-wrap {
     overflow-y: auto;
-}
-
-.home-panelList-wrap {
-    display: flex;
+  }
+  
+  .home_panelList-wrap {
     flex: 1;
-
-}
-
-.home-panel-wrap {
+    display: flex;
+  }
+  .home_panel-wrap {
     flex-basis: 280px;
     padding: 1rem;
-}
-
-.home-list-wrap {
+  }
+  .home_list-wrap {
     flex: 1;
     padding: 1rem;
-}
+  }

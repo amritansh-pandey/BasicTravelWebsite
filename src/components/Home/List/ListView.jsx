@@ -1,11 +1,12 @@
-import React from 'react'
+import ListItem from './ListItem/ListItem';
+import './ListView.css';
 
-const ListView = () => {
-    return (
-      <div>
-        <h1>List View</h1>
-      </div>
-    )
-  }
+const List = ({ list }) => (
+  <div className='list-wrap'>
+    {list.map((item) => (
+      <ListItem key={item.id} item={item} />
+    ))}
+  </div>
+);
 
-export default ListView;
+export default List;
